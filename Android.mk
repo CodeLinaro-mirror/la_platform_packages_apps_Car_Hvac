@@ -25,7 +25,10 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
 LOCAL_PACKAGE_NAME := CarHvacApp
+
 LOCAL_PRIVATE_PLATFORM_APIS := true
+
+LOCAL_REQUIRED_MODULES := privapp_whitelist_com.android.car.hvac
 
 LOCAL_CERTIFICATE := platform
 
@@ -35,8 +38,7 @@ LOCAL_PRIVILEGED_MODULE := true
 
 LOCAL_JAVA_LIBRARIES += android.car
 
-LOCAL_STATIC_JAVA_LIBRARIES += jsr305 \
-    android.car
+LOCAL_STATIC_JAVA_LIBRARIES += jsr305
 
 LOCAL_STATIC_ANDROID_LIBRARIES += \
     androidx.legacy_legacy-support-v4
